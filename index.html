@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style type="text/css">
+  </style>
+</head>
+
+<body>
+  <h1>Sample</h1>
+  <p></p>
+</body>
+
+<script   src="https://code.jquery.com/jquery-1.12.4.js"   integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="   crossorigin="anonymous"></script>
+<script>
+var messages = ['おおなみです', 'みずのです', 'もりかわです'];
+var i = Math.round(Math.random() * (messages.length - 1));
+$('p').hide();
+setInterval(function() {
+  $('p').text(messages[i]).fadeIn(1500, function() {
+    $('p').animate({'font-size' : '120%'}, function() {
+      $('p').fadeOut(1500);
+    })
+  });
+
+  i++;
+  if (i == messages.length) {
+    i = 0;
+  }
+}, 3000);
+
+</script>
+
+</html>
