@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style type="text/css">
+  </style>
+</head>
+
+<body>
+  <h1>Sample</h1>
+  <h2>href</h2>
+  <p id="location-href"></p>
+  <h2>path-name</h2>
+  <p id="location-path-name"></p>
+  <h2>searh</h2>
+  <p id="location-search"></p>
+</body>
+
+<script   src="https://code.jquery.com/jquery-1.12.4.js"   integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="   crossorigin="anonymous"></script>
+<script>
+  $('#location-href').text(window.location.href);
+  $('#location-path-name').text(window.location.pathname);
+  if (window.location.search == '') {
+    $('#location-search').text('なし');
+  } else {
+    $('#location-search').text(window.location.search);
+  }
+</script>
+
+</html>
